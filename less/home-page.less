@@ -2,42 +2,63 @@
 
 .home {
 
+
   .intro {
+    margin-top: 11vh;
+    @media @phone {
+      img{
+        .fullWidth();
+      }
+    }
 
     h2 {
       padding: 15px;
-    }
+    }//h2 intro end
 
     p {
       padding:0 15px;
-    }
+    }//p intro end
   
-  }
+  }//intro end
 
   .space-images {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
 
+    
+
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
+    }//img spaace images end
+
+    @media @phone {
+      .sky,.launch{
+        display: none;
+      }
+      .blast{
+        
+        width: 90%;
+        margin: 3% auto;
+      }
     }
-  }
+  }//space images end
 
   .visit-planets {
     padding: 15px;
 
     h3 {
       margin-top: 11px;
-    }
+    }//h3 visit planets end
 
     p {
       margin-top: 13px;
-    }
-  }
+    }//p  visit planets end
+  }//visit planets end
 
   .walk {
     margin-top: 60px;
@@ -46,20 +67,40 @@
     display: flex;
     justify-content: center;
 
+    @media @phone {
+      flex-direction: column-reverse;
+      padding: 4% 4%;
+    }
+
     .walk-text {
       width: 50%;
 
       h3 {
         margin-bottom: 10px;
-      }
+      }//h3 walk text end
 
       p {
         margin-bottom: 26px;
-      }
+      }//p  walk text end
 
-      .btn {
+      @media @phone{
+        .fullWidth();
       }
-    }
+      .btn {
+
+        .btnM(1.5rem,@header-font-color,30%);
+
+        @media @phone{
+          .fullWidth();
+          padding: 6% 0;
+        }
+        
+        &:hover {
+          background-color: white;
+          color: @header-font-color;
+        }//hover btn  walk text walk end
+      }//btn walk text walk end
+    }//walk text walk end
 
     .walk-img {
       width: 46%;
@@ -69,7 +110,23 @@
         width: 100%;
         height: auto;
         border-radius: 10px;
+      }//img walk img walk end
+
+      @media @phone{
+        .fullWidth();
+        margin-left: 0;
+        margin-bottom: 10px;
       }
+    }//walk img walk end
+  }//walk end
+
+
+  @media @phone{
+    h2,h3{
+      font-size: 2.5rem;
+    }
+    p{
+      font-size: 1.3rem;
     }
   }
 }// home

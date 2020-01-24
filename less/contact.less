@@ -1,0 +1,123 @@
+.contactHeader{
+
+    @media @phone{
+        h2{
+            text-align: center;
+        }
+    }
+    div{
+        
+        .flex( center ,center);
+
+        @media @phone{
+            flex-direction: column;
+ 
+        }
+        
+        p{
+        width: 30%;
+        @media @phone{
+            .fullWidth();
+            text-align: center;
+            margin: 3% 0;
+        }
+        }
+
+        iframe{
+            width: 69% ;
+            height:150px ;
+            @media @phone{
+                .fullWidth();
+            }
+        }   
+    }     
+}
+
+.requests {
+    .flex(center,center);
+    margin: 3% auto;
+
+    @media @phone{
+        flex-direction: column;;
+    }
+
+    .call{
+        width: 28%;
+        @media @phone{
+            .fullWidth();
+            margin-top: 5%;
+        }
+    }
+    .magazine{
+        width: 68%;
+        @media @phone{
+            .fullWidth();
+            margin-top: 5%;
+        }
+    }
+    .call, .magazine{   
+        text-align: center; 
+        h3{
+            
+        }
+      
+
+        form{
+            margin: 2% 0;
+            
+            input{
+                padding: 4px;
+                margin: 5px 0;
+                text-align: center;
+                font-family: 'Ubuntu', sans-serif;
+                color: white;
+                background-color: @header-font-color;
+                border: none;
+                
+            }
+            .submit{
+                    .btnM(1.5rem,@header-font-color,40%);
+                }
+
+            
+        }
+
+        .subscript{
+            .flex(flex-start, center);
+            flex-direction: row-reverse;
+
+            @media @phone{
+                .fullWidth();
+                flex-direction: column;
+                
+            }
+
+            .magChoice{
+                text-align: left;
+                padding-left: 5%;
+                width: 58%;
+                font-size: 2rem;
+                input{
+                    padding: 6% 0;
+                    margin: 6% 0;
+                }
+
+                @media @phone{
+                    .fullWidth();
+                   text-align: center;
+                }
+            }
+            .magInfo{
+                width: 40%;
+
+                @media @phone{
+                    .fullWidth();
+                   
+                }
+            }
+
+
+        }
+        
+    }
+}
