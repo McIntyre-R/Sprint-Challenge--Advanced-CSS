@@ -1,11 +1,21 @@
 // Navigation code here
 .navWrap{
     background-color: @nav-bg;
-
+    position: fixed;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 0;
+   
+    z-index: 99;
+    
+    // height: 10vh;
     nav{   
    
         width: 800px;
         margin: 0 auto;
+        
+        
         .flex(center,center);
         flex-direction: column;
 
@@ -22,6 +32,9 @@
             h1{
                 font-size: 4rem;
                 color: @header-font-color;
+
+                @keyframes pulse {.mixi-frames;}
+                .animation(pulse 4s ease infinite;);
 
                 @media @phone{
                     font-size: 3rem;

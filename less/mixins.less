@@ -14,8 +14,20 @@
     width: 100%;
 }
 
-  .flex(@justify,@align){
+.flex(@justify,@align){
       display: flex;
       justify-content: @justify;
       align-items: @align;
-  }
+}
+
+
+
+
+.mixi-frames{
+    0% , 100%{color: @header-font-color };
+    50% {color: @footer-font-color};
+}
+
+.animation(@arguments) {
+animation: @arguments;
+}
