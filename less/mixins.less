@@ -1,1 +1,21 @@
 // Mixins Here
+
+.btnM(@font-size,@bg-color,@width){
+    text-align: center;
+    color: white;
+    font-size: @font-size;
+    padding: 10px 1%;
+    background-color: @bg-color;
+    width:@width;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+.fullWidth(){
+    width: 100%;
+}
+
+  .flex(@justify,@align){
+      display: flex;
+      justify-content: @justify;
+      align-items: @align;
+  }
